@@ -2,20 +2,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.sass';
 
-export default function Destination() {
+function Crew() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Destination</title>
-        <meta name='description' content='Destination for people' />
-        <link rel='icon' href='/favicon.ico' />
+        <title>Crew</title>
+        <meta name='description' content='Meet the crew' />
+        <link rel='icon' href='/favicon-32x32.png' />
       </Head>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Create Apps with{' '}
-          <a href='https://fernandocutire.com'>Fercu and Asley</a>
+          Crew <a href='https://fernandocutire.com'>Fercu and Asley</a>
         </h1>
       </main>
+
       <footer className={styles.footer}>
         <a
           href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
@@ -31,3 +32,5 @@ export default function Destination() {
     </div>
   );
 }
+
+export default Crew;
