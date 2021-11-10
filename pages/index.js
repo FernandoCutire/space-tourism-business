@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.sass';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
           name='description'
           content='An app created by Fernando and Asley'
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon-32x32.png' />
       </Head>
 
       <main className={styles.main}>
