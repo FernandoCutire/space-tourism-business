@@ -13,22 +13,33 @@ function Destination() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Destination <a href='https://fernandocutire.com'>Fercu and Asley</a>
+          <span>01</span> Pick your destination
         </h1>
+        <div>
+          <section></section>
+          <section>
+            <ul>
+              <li>Moon</li>
+              <li>Mars</li>
+              <li>Europa</li>
+              <li>Titan</li>
+            </ul>
+            <h2></h2>
+            <p></p>
+            <div></div>
+            <ul>
+              <li>
+                <p>Avg. Distance</p>
+                <h4></h4>
+              </li>
+              <li>
+                <p>Est. Travel TIme</p>
+                <h4></h4>
+              </li>
+            </ul>
+          </section>
+        </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
