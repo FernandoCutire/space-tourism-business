@@ -11,24 +11,26 @@ function Technology() {
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Technology <a href='https://fernandocutire.com'>Fercu and Asley</a>
+      <main>
+        <h1>
+          <span>03</span> Space Launch 101
         </h1>
+        <div>
+          <section>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+            <div>
+              <h2>The technology ...</h2>
+              <h1></h1>
+              <p></p>
+            </div>
+          </section>
+          <section></section>
+        </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
