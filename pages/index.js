@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Apps with Fercu and Asley</title>
+        <title>Create Apps with Fercutibee and NornOrn</title>
         <meta
           name='description'
           content='An app created by Fernando and Asley'
