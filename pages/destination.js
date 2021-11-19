@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.sass';
+import Navbar from '../components/Navbar';
 
 function Destination() {
   return (
@@ -10,6 +11,9 @@ function Destination() {
         <meta name='description' content='Destination for people' />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
+      <Navbar>
+      
+      </Navbar>
 
       <main className={styles.main}>
         <h1 className={styles.title}>

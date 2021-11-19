@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-// import '../styles/Home.module.sass';
+//import styles from  '../styles/Home.module.sass';
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   return (
@@ -10,15 +11,18 @@ export default function Home() {
         <title>Create Apps with Fercutibee and NornOrn</title>
         <meta
           name='description'
-          content='An app created by Fernando and Asley'
+          content='An app created by Fernando and NornOrn'
         />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
+      <Navbar>
+      
+      </Navbar>
 
       <main className='home'>
         <section className='home__main'>
           <article className='home__text--container'>
-            <h2 className='home--subheading'>So, you want to go to space</h2>
+            <h2 className='home--subheading'>So, you want to travel to</h2>
             <h1 className='home--heading'>Space</h1>
             <p className='home--para'>
               Let’s face it; if you want to go to space, you might as well
@@ -27,11 +31,11 @@ export default function Home() {
               this world experience!
             </p>
           </article>
-          <Link href='/destination' passHref>
+          <Link href='/destination' passHref><a>
             <button className='home__explore--container' aria-expanded='false'>
               <span>Explore</span>
             </button>
-          </Link>
+          </a></Link>
         </section>
       </main>
     </div>
