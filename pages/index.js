@@ -8,16 +8,14 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Apps with Fercutibee and NornOrn</title>
+        <title>Touriny Space</title>
         <meta
           name='description'
           content='An app created by Fernando and NornOrn'
         />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
-      <Navbar>
-      
-      </Navbar>
+      <Navbar></Navbar>
 
       <main className='home'>
         <section className='home__main'>
@@ -31,11 +29,16 @@ export default function Home() {
               this world experience!
             </p>
           </article>
-          <Link href='/destination' passHref><a>
-            <button className='home__explore--container' aria-expanded='false'>
-              <span>Explore</span>
-            </button>
-          </a></Link>
+          <Link href='/destination' passHref>
+            <a>
+              <button
+                className='home__explore--container'
+                aria-expanded='false'
+              >
+                <span>Explore</span>
+              </button>
+            </a>
+          </Link>
         </section>
       </main>
     </div>

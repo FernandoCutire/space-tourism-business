@@ -1,44 +1,57 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../assets/shared/logo.svg';
 
 function Navbar() {
   return (
-    <div className='navbar'>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"/>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"/>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"/>
-      <div className='logo'></div>
+    <header className='navbar' role='navigation'>
+      <div className='logo' aria-label='homepage'>
+        <Image src={logo} alt='Logo' />
+      </div>
+      <button
+        className='hamburger mobile'
+        onClick={() => hamburger()}
+        aria-expanded='false'
+        aria-label='navigation dropdown menu'
+      >
+        <div className='stick stick1'></div>
+        <div className='stick stick2'></div>
+        <div className='stick stick3'></div>
+      </button>
       <nav className='nav-container'>
         <div className='bg-blur'></div>
         <ul className='nav-links'>
           <li className='navlink'>
-            <Link href='/' id='home' passHref><a>
-              <strong>00</strong> HOME  
-            </a></Link>
+            <Link href='/' id='home' passHref>
+              <span className='nav-btn'>
+                <strong>00</strong> HOME
+              </span>
+            </Link>
           </li>
           <li className='navlink'>
-            <Link href='/destination'  id='destination' passHref><a>
-              <strong>01</strong> DESTINATION
-            </a></Link>
+            <Link href='/destination' id='destination' passHref>
+              <span className='nav-btn'>
+                <strong>01</strong> DESTINATION
+              </span>
+            </Link>
           </li>
           <li className='navlink'>
-            <Link href='/crew' id='crew' passHref><a>
-              <strong>02</strong> CREW
-            </a></Link>
+            <Link href='/crew' id='crew' passHref>
+              <span className='nav-btn'>
+                <strong>02</strong> CREW
+              </span>
+            </Link>
           </li>
           <li className='navlink'>
-            <Link href='/technology' id='technology' passHref><a>
-              <strong>03</strong> TECHNOLOGY
-            </a></Link>
+            <Link href='/technology' id='technology' passHref>
+              <span className='nav-btn'>
+                <strong>03</strong> TECHNOLOGY
+              </span>
+            </Link>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 
