@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-//import styles from  '../styles/Home.module.sass';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 
@@ -15,8 +14,7 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
-      <Navbar></Navbar>
-
+      <Navbar />
       <main className='home'>
         <section className='home__main'>
           <article className='home__text--container'>
