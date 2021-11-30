@@ -1,6 +1,6 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import data from '../assets/starter/data.json';
 import image1 from '../assets/technology/image-launch-vehicle-portrait.jpg';

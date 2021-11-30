@@ -34,28 +34,28 @@ function Navbar() {
         <ul className='nav-links'>
           <li className='navlink'>
             <Link href='/' id='home' passHref>
-              <span className='nav-btn' onClick={() => pageHandler(0)}>
+              <span className='nav-btn'>
                 <strong>00</strong> HOME
               </span>
             </Link>
           </li>
           <li className='navlink'>
             <Link href='/destination' id='destination' passHref>
-              <span className='nav-btn' onClick={() => pageHandler(1)}>
+              <span className='nav-btn'>
                 <strong>01</strong> DESTINATION
               </span>
             </Link>
           </li>
           <li className='navlink'>
             <Link href='/crew' id='crew' passHref>
-              <span className='nav-btn' onClick={() => pageHandler(2)}>
+              <span className='nav-btn' >
                 <strong>02</strong> CREW
               </span>
             </Link>
           </li>
           <li className='navlink'>
             <Link href='/technology' id='technology' passHref>
-              <span className='nav-btn' onClick={() => pageHandler(3)}>
+              <span className='nav-btn'>
                 <strong>03</strong> TECHNOLOGY
               </span>
             </Link>
