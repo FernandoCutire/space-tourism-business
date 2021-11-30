@@ -1,35 +1,56 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.sass';
+import Navbar from '../components/Navbar';
+import data from '../assets/starter/data.json';
+import person1 from '../assets/crew/image-douglas-hurley.png';
+import person2 from '../assets/crew/image-mark-shuttleworth.png';
+import person3 from '../assets/crew/image-victor-glover.png';
+import person4 from '../assets/crew/image-anousheh-ansari.png';
+
+const persons = [person1, person2, person3, person4];
 
 function Crew() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const list = document.querySelectorAll('li.crew-link');
+    for (let i = 0; i < list.length; i++) {
+      list[i].classList.remove('active');
+      i === index && list[i].classList.add('active');
+    }
+  }, [index]);
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Crew</title>
         <meta name='description' content='Meet the crew' />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          <span>02</span> Meet your crew
-        </h1>
-      </main>
-
-      <div>
-        <section>
-          <h3></h3>
-          <h2></h2>
-          <p></p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </section>
-        <section>{/* <img src=''></img> */}</section>
+      <Navbar />
+      <div className='crew'>
+        <main className='crew-wrapper'>
+          <h1 className='crew-header-text'>
+            <span>02</span> Meet your crew
+          </h1>
+        </main>
+        <div className='crew-container'>
+          <section className='crew-text-wrapper'>
+            <h3 className='crew--role'>{data.crew[index].role}</h3>
+            <h2 className='crew--name'>{data.crew[index].name}</h2>
+            <p className='crew--description'>{data.crew[index].bio}</p>
+            <ul className='crew-links'>
+              <li className='crew-link active' onClick={() => setIndex(0)}></li>
+              <li className='crew-link' onClick={() => setIndex(1)}></li>
+              <li className='crew-link' onClick={() => setIndex(2)}></li>
+              <li className='crew-link' onClick={() => setIndex(3)}></li>
+            </ul>
+          </section>
+          <section className='crew-img-wrapper'>
+            <Image src={persons[index]} alt='Person' />
+          </section>
+        </div>
       </div>
     </div>
   );

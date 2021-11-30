@@ -1,0 +1,217 @@
+.destination
+  width: 100%
+  min-height: 100vh
+  background: url('../assets/destination/background-destination-desktop.jpg')
+  background-size: cover
+  padding-top: 20vh
+  @media only screen and (max-width: 768px)
+    height: auto
+    background: url('../assets/destination/background-destination-tablet.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  @media only screen and (max-width: 375px)
+    height: auto
+    background: url('../assets/destination/background-destination-mobile.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    padding-top: 15vh
+
+  .planet-wrapper
+    width: 80%
+    margin: 50px auto 0
+    position: relative
+    z-index: 10
+    @media only screen and (max-width: 768px)
+      width: 100%
+      margin: 1vw auto 0
+
+  .planet-header-text
+    color: $white
+    font-size: 28px
+    letter-spacing: 4.72px
+    text-transform: uppercase
+    font-family: $font-sans
+    font-weight: 200
+    @media only screen and (max-width: 768px)
+      padding-left: 5vw
+      font-size: 4vw
+      letter-spacing: 0.7vw
+
+    @media only screen and (max-width: 375px)
+      text-align: center
+      font-size: 5vw
+      font-weight: 400
+      padding: 0
+
+    span
+      font-weight: 700
+      color: #666
+      margin-right: 10px
+
+.planet-container
+  display: flex
+  margin-top: 50px
+  @media only screen and (max-width: 768px)
+    flex-direction: column
+    text-align: center
+    margin-top: 5vw
+
+  .planet-img-wrapper
+    flex: 1
+
+    img
+      width: 70%
+      @media only screen and (max-width: 768px)
+        width: 50%
+
+      @media only screen and (max-width: 375px)
+        margin-top: 5vw
+
+  .planet-text-wrapper
+    flex: 1
+    @media only screen and (max-width: 768px)
+      text-align: center
+
+    .planet-links
+      list-style: none
+      display: flex
+      align-items: center
+      font-size: 1rem
+      letter-spacing: 2.7px
+      font-family: $font-sans
+      text-transform: uppercase
+      @media only screen and (max-width: 768px)
+        width: 40%
+        margin: 10vw auto 5vw
+        font-size: 2vw
+        justify-content: space-between
+
+      @media only screen and (max-width: 375px)
+        width: 60%
+        font-size: 4vw
+
+      .planet-link
+        color: $gray
+        margin-right: 10%
+        cursor: pointer
+        position: relative
+        font-weight: 300
+        @media only screen and (max-width: 768px)
+          text-align: center
+          margin: 0
+
+        &.active
+          color: $white
+
+        &.active::after
+          opacity: 1
+          bottom: -10px
+
+    &
+      bottom: -1vw
+
+    &::after
+      content: ''
+      position: absolute
+      width: 95%
+      height: 3px
+      background: $white
+      bottom: -20px
+      left: 0
+      opacity: 0
+      transition: 250ms ease-in
+
+    &
+      height: 0.5vw
+
+    &:hover::after
+      opacity: 1
+      bottom: -10px
+
+    &
+      bottom: -1vw
+
+    .planet--name
+      font-size: 100px
+      text-transform: uppercase
+      margin: 25px 0
+      color: $white
+      font-weight: 200
+      @media only screen and (max-width: 768px)
+        font-size: 20vw
+        margin: 3vw 0
+
+      @media only screen and (max-width: 375px)
+        font-size: 17vw
+        margin: 5vw 0 3vw
+
+    .planet--description
+      font-size: 18px
+      width: 70%
+      color: $gray
+      line-height: 2rem
+      font-family: $font-sans2
+      font-weight: 300
+      /* opacity: 0.7; */
+      @media only screen and (max-width: 768px)
+        margin: 0 auto
+        text-align: center
+        font-size: 3vw
+        line-height: 5vw
+
+      @media only screen and (max-width: 375px)
+        width: 85%
+        font-size: 4vw
+        line-height: 7vw
+
+    .planet--divider
+      width: 80%
+      height: 0.5px
+      background: $gray
+      opacity: 0.4
+      margin: 40px 0 25px
+      @media only screen and (max-width: 768px)
+        margin: 5vw auto 3vw
+
+      @media only screen and (max-width: 375px)
+        width: 90%
+        height: 0.6px
+        margin: 7vw auto 5vw
+
+    .planet--stats-container
+      display: flex
+      @media only screen and (max-width: 768px)
+        margin: 0 auto 5vw
+
+      @media only screen and (max-width: 375px)
+        flex-direction: column
+
+      .planet--stats
+        flex: 1
+        @media only screen and (max-width: 375px)
+          margin: 5vw auto 3vw
+
+        .heading
+          color: $gray
+          text-transform: uppercase
+          font-family: $font-sans
+          font-size: 14px
+          letter-spacing: 2.36px
+          @media only screen and (max-width: 768px)
+            font-size: 2vw
+
+          @media only screen and (max-width: 375px)
+            font-size: 4vw
+
+        .value
+          color: $white
+          text-transform: uppercase
+          font-size: 28px
+          margin-top: 20px
+          @media only screen and (max-width: 768px)
+            font-size: 5vw
+
+          @media only screen and (max-width: 375px)
+            font-size: 8vw
+            font-weight: 300
